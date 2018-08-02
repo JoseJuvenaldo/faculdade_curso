@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="465.0" prefWidth="956.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.FormularioController">
+    <children>
+        <SplitPane dividerPositions="0.5" layoutY="14.0" prefHeight="459.0" prefWidth="946.0" AnchorPane.bottomAnchor="-14.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="14.0">
+            <items>
+                <GridPane prefHeight="388.0" prefWidth="391.0">
+                    <columnConstraints>
+                        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="208.0" minWidth="10.0" prefWidth="107.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="324.0" minWidth="10.0" prefWidth="324.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Label text="Cod: " />
+                        <Label text="Nome: " GridPane.rowIndex="1" />
+                        <Label text="RG: " GridPane.rowIndex="2" />
+                        <Label text="CPF: " GridPane.rowIndex="3" />
+                        <Label text="Sexo: " GridPane.rowIndex="4" />
+                        <Label text="Data de nascimento: " GridPane.rowIndex="5" />
+                        <Label text="E-mail: " GridPane.rowIndex="6" />
+                        <Label text="Curso: " GridPane.rowIndex="8" />
+                        <Label text="UF: " GridPane.rowIndex="7" />
+                        <Label text="Faculdade: " GridPane.rowIndex="9" />
+                        <TextField GridPane.columnIndex="1" />
+                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                            <children>
+                                <RadioButton mnemonicParsing="false" text="Feminino">
+                                    <toggleGroup>
+                                        <ToggleGroup fx:id="GrupoGenero" />
+                                    </toggleGroup>
+                                </RadioButton>
+                                <RadioButton mnemonicParsing="false" text="Masculino" toggleGroup="$GrupoGenero" />
+                            </children>
+                            <padding>
+                                <Insets top="10.0" />
+                            </padding>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="10">
+                            <children>
+                                <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: #7c430e; -fx-background-radius: 90;" text="Remover" textFill="#f8f6f6" />
+                                <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: #ae641e; -fx-background-radius: 90;" text="Alterar" textFill="#f8f6f6" />
+                                <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: #2c8ad4; -fx-background-radius: 90;" text="Inserir" textFill="#f8f6f6" />
+                        <Button fx:id="btnCancelar" mnemonicParsing="false" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: #000000; -fx-background-radius: 90;" text="Cancelar" textFill="#f8f6f6" />
+                            </children>
+                        </HBox>
+                  <ComboBox fx:id="comBoxUf" prefHeight="25.0" prefWidth="323.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                  <ComboBox fx:id="comBoxCurso" prefHeight="25.0" prefWidth="323.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                  <ComboBox fx:id="comBoxFaculdade" prefHeight="25.0" prefWidth="326.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                    </children>
+                </GridPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="459.0" prefWidth="942.0">
+                    <children>
+                        <Label layoutX="163.0" layoutY="14.0" text="Detahles do candidato">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Label>
+                        <TableView layoutX="-53.0" layoutY="79.0" prefHeight="463.0" prefWidth="527.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <columns>
+                                <TableColumn fx:id="tableColumnNome" prefWidth="75.0" text="Nome" />
+                                <TableColumn fx:id="tableColumnRg" prefWidth="75.0" text="RG" />
+                                <TableColumn fx:id="tableColumnEmail" prefWidth="75.0" text="E-mail" />
+                                <TableColumn fx:id="tableColumnUf" prefWidth="75.0" text="UF" />
+                                <TableColumn fx:id="tableColumnCurso" prefWidth="75.0" text="Curso" />
+                                <TableColumn fx:id="tableColumnFaculdade" prefWidth="75.0" text="Faculdade" />
+                            </columns>
+                            <columnResizePolicy>
+                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                            </columnResizePolicy>
+                        </TableView>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>
