@@ -21,10 +21,10 @@ import javafx.stage.Stage;
  *
  * @author JUVENALDO
  */
-public class FaculdadeCadastroController implements Initializable {
+public class EnderecoController implements Initializable {
 
     @FXML
-    private Button btnVoltar;
+    private Button btnCancelar;
 
     /**
      * Initializes the controller class.
@@ -34,10 +34,10 @@ public class FaculdadeCadastroController implements Initializable {
         // TODO
     }
 
-    public void voltar() throws IOException {
+    public void voltarFormulario() throws IOException {
 
         Stage stage = new Stage();
-        AnchorPane root = FXMLLoader.load(getClass().getResource("../View/FaculdadePrincipal.fxml"));
+        AnchorPane root = FXMLLoader.load(getClass().getResource("../application/Formulario.fxml"));
 
         Scene scene = new Scene(root);
 
@@ -46,7 +46,7 @@ public class FaculdadeCadastroController implements Initializable {
         stage.show();
 
         //Fecha a janela inicial e exibe a próxima
-        btnVoltar.getScene().getWindow().hide();
+        btnCancelar.getScene().getWindow().hide();
 
     }
 

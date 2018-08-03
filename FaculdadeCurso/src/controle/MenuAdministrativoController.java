@@ -23,7 +23,8 @@ import javafx.stage.Stage;
 /**
  * FXML Controller class
  *
- * @author JUVENALDO
+ * @author JOSÉ JUVENALDO
+ * @author RONALDO SILVA
  */
 public class MenuAdministrativoController implements Initializable {
 
@@ -57,6 +58,7 @@ public class MenuAdministrativoController implements Initializable {
         Scene scene = new Scene(root);
 
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
 
         btnEstado.getScene().getWindow().hide();

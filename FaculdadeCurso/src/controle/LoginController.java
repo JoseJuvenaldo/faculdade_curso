@@ -63,6 +63,8 @@ public class LoginController implements Initializable {
                         Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
                     }
 
+                    //INICIO DO BLOCO TESTE
+                    //FIM DO BLOCO TESTE
                     Scene scene = new Scene(root);
 
                     stage.setScene(scene);
@@ -76,9 +78,8 @@ public class LoginController implements Initializable {
                     alerta.setHeaderText("MENU DE EDIÇÃO ADMINISTRATIVA");
                     alerta.show();
 
-                } else {
-
-                    Alert alerta = new Alert(Alert.AlertType.ERROR);
+                    //} else {
+                    //  Alert alerta = new Alert(Alert.AlertType.ERROR);
                     alerta.setTitle("FACULDADE/CURSO!");
                     alerta.setHeaderText("Usuário ou senha incorreto...");
                     alerta.show();
@@ -97,5 +98,4 @@ public class LoginController implements Initializable {
 
         });
     }
-
 }

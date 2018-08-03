@@ -4,7 +4,7 @@ Ronaldo Silva;
 
 FACULDADE/CURSO
 
-Sistema simples de cadastramento de aluno, tendo como base Prouni;
+Sistema simples de cadastramento de aluno, tendo como base o sistema Prouni;
 Ferramentas a serem exploradas durante a criação do mesmo:
 Mysql;
 Netbeans;

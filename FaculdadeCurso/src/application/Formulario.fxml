@@ -71,10 +71,10 @@
                         </HBox>
                         <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="10">
                             <children>
-                                <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: #7c430e; -fx-background-radius: 90;" text="Remover" textFill="#f8f6f6" />
+                                <Button fx:id="btnProximo" mnemonicParsing="false" onAction="#cadastroEndereco" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: #7c430e; -fx-background-radius: 90;" text="Proximo" textFill="#f8f6f6" />
                                 <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: #ae641e; -fx-background-radius: 90;" text="Alterar" textFill="#f8f6f6" />
                                 <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: #2c8ad4; -fx-background-radius: 90;" text="Inserir" textFill="#f8f6f6" />
-                        <Button fx:id="btnCancelar" mnemonicParsing="false" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: #000000; -fx-background-radius: 90;" text="Cancelar" textFill="#f8f6f6" />
+                        <Button fx:id="btnCancelar" mnemonicParsing="false" onAction="#voltaLogin" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: #000000; -fx-background-radius: 90;" text="Cancelar" textFill="#f8f6f6" />
                             </children>
                         </HBox>
                   <ComboBox fx:id="comBoxUf" prefHeight="25.0" prefWidth="323.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
