@@ -30,6 +30,7 @@ import javafx.stage.Stage;
  */
 public class FormularioController implements Initializable {
 
+    //INTERAÇÃO COM A INTERFACE DO SCENE BUILDER
     @FXML
     private Button btnProximo;
     @FXML
@@ -47,14 +48,15 @@ public class FormularioController implements Initializable {
     @FXML
     private ComboBox<CursoPrincipal> comBoxCurso;
     private ObservableList<CursoPrincipal> listarCursos;
+    // CLASSE DB
     private Conexion conexao;
 
     /**
-     * Initializes the controller class.
+     * CLASSE PADRÃO DE INICIALIZAÇÃO
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        // CONECTANDO COM BANCO DE DADOS
         conexao = new Conexion();
         conexao.estabelecerConexao();
         listarCursos = FXCollections.observableArrayList();

@@ -36,6 +36,12 @@ public class CursoPrincipal {
         this.nome = nome;
     }
 
+    /**
+     *
+     * @param conexao VARIÁVEL INICIADORA PARA A BASE DE DADOS
+     * @param lista VASCULHA AS INFORMAÇÕES NA BASE DE DADOS MYSQL E IMPRIME NA
+     * TELA
+     */
     public static void listarInformacoes(Conexion conexao, ObservableList<CursoPrincipal> lista) {
         /*
         try {
@@ -51,6 +57,11 @@ public class CursoPrincipal {
          */
     }
 
+    /**
+     * APRESENTAÇÃO DA CAPTURA DE INFORMAÇÕES
+     *
+     * @return
+     */
     @Override
     public String toString() {
         return id.get() + " ( " + nome.get() + " )";

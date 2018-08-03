@@ -48,6 +48,12 @@ public class MenuAdministrativoController implements Initializable {
         // TODO
     }
 
+    /**
+     * REDIRECIONA PARA UM ARQUIVO FXML IDENTIFICADO DENTRO DO PARÊNTESE
+     *
+     * @param e
+     * @throws IOException
+     */
     @FXML
     private void btnEstado(ActionEvent e) throws IOException {
         System.out.println("Botão ativo!");
@@ -63,6 +69,7 @@ public class MenuAdministrativoController implements Initializable {
 
         btnEstado.getScene().getWindow().hide();
 
+        //ALERTA DE CONFIRMAÇÃO
         Alert alerta = new Alert(Alert.AlertType.CONFIRMATION);
         alerta.setTitle("FACULDADE/CURSO!");
         alerta.setHeaderText("Tela de cadastramento de estados");
@@ -109,6 +116,11 @@ public class MenuAdministrativoController implements Initializable {
         alerta.show();
     }
 
+    /**
+     * CANCELA JANELA ATUAL E RETORNA A ANTERIOR
+     *
+     * @throws IOException
+     */
     public void cancelarExecucao() throws IOException {
 
         Stage stage = new Stage();

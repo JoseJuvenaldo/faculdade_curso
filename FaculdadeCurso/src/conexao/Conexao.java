@@ -11,6 +11,9 @@ import java.sql.DriverManager;
 /**
  *
  * @author JUVENALDO
+ * @author RONALDO
+ *
+ * CLASSE PARA ESTABELECER CONEXÃO COM BANCO DE DADOS
  */
 public class Conexao {
 
@@ -19,7 +22,7 @@ public class Conexao {
     public static Connection ConnectDB() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/faculdade", "root", "");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/fc", "root", "");
             return conn;
         } catch (Exception e) {
             //System.out.Println("erro...");

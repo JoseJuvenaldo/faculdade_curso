@@ -19,7 +19,7 @@ import java.util.logging.Logger;
 public class Conexion {
 
     private Connection conexao;
-    private String url = "jdbc:mysql://localhost/faculdade";
+    private String url = "jdbc:mysql://localhost/fc";
     private String usuario = "root";
     private String senha = "";
 
@@ -34,7 +34,7 @@ public class Conexion {
     public void estabelecerConexao() {
 
         try {
-            Class.forName("jdbc:mysql://localhost/faculdade");
+            Class.forName("jdbc:mysql://localhost/fc");
             try {
                 conexao = DriverManager.getConnection(url, usuario, senha);
             } catch (SQLException ex) {
@@ -49,12 +49,17 @@ public class Conexion {
         try {
             conexao.close();
         } catch (Exception e) {
+
+            //caso tenha algum problema dentro do try ele vai para o catch.
+            // para saber qual foi o erro que deu usar o metodo
+            //printStackTrace() que tem dentro das classes "Exception"
             e.printStackTrace();
         }
     }
 
+    //Statement é uma interface utilizada para executar instruções SQL.
     public Statement createStatement() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
 }

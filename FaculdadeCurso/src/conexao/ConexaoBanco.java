@@ -8,14 +8,14 @@ import java.sql.SQLException;
 public final class ConexaoBanco {
 
     private static final String DRIVER = "com.mysql.jdbc.Driver";
-    private static final String NOME = "faculdade";
+    private static final String NOME = "fc";
     private static final String USUARIO = "root";
     private static final String SENHA = "";
     private static final String SERVIDOR = "localhost";
     private static Connection connection;
 
     public static Connection getConnection() throws ClassNotFoundException, SQLException {
-        System.out.println("ok");
+
         if (connection == null) {
             // Carregando o Driver do MySQL
 

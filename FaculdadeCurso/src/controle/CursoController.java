@@ -88,6 +88,7 @@ public class CursoController {
      * @author José Juvenaldo
      * @author Ronaldo Silva
      *
+     *
      */
     private void atualisaList() {
         //Limpa a lista no banco de dados para que possa atualizar
@@ -114,6 +115,7 @@ public class CursoController {
 
     }
 
+    // RETORNA PARA A TELA ADMINISTRATIVA
     public void voltarParaMenuAdministrativo() throws IOException {
 
         Stage stage = new Stage();
